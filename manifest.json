@@ -1,0 +1,35 @@
+{
+    "manifest_version": 3,
+    "name": "BigO",
+    "version": "1.0",
+    "description": "Analyze time complexity of LeetCode solutions",
+    "permissions": [
+      "storage",
+      "scripting",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://leetcode.com/*",
+      "https://generativelanguage.googleapis.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [{
+      "matches": ["https://leetcode.com/problems/*"],
+      "js": ["content.js"]
+    }],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "assets/16logo.png",
+        "48": "assets/48logo.png",
+        "128": "assets/128logo.png"
+      }
+    },
+    "options_page": "options/options.html",
+    "web_accessible_resources": [{
+      "resources": ["styles/tailwind.css"],
+      "matches": ["<all_urls>"]
+    }]
+  }

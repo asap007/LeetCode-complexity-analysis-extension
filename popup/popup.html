@@ -1,0 +1,65 @@
+<!-- popup/popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Analyzer</title>
+    <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .error-message {
+      color: #dc3545;
+      background-color: #f8d7da;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .setup-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .setup-button:hover {
+      background-color: #0056b3;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>LeetCode Complexity Analyzer</h2>
+    
+    <!-- API Key Not Set Message -->
+    <div id="apiKeyMissing" class="hidden">
+      <div class="error-message">
+        Please set up your Gemini API key to continue.
+      </div>
+      <button id="setupButton" class="setup-button">Set Up API Key</button>
+    </div>
+
+    <!-- Main Content (shown when API key is set) -->
+    <div id="mainContent" class="hidden">
+      <button id="analyzeButton" class="setup-button">Analyze Current Solution</button>
+<div id="analysisStatus" class="status hidden"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

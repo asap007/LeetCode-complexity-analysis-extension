@@ -1,0 +1,67 @@
+<!-- options/options.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LeetCode Analyzer Settings</title>
+    <style>
+    body {
+      width: 100%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+border-radius: 4px;
+    }
+    .success {
+      background-color: #dff0d8;
+      color: #3c763d;
+    }
+    .error {
+      background-color: #f2dede;
+      color: #a94442;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LeetCode Analyzer Settings</h1>
+    <div class="input-group">
+      <label for="apiKey">Google Gemini API Key:</label>
+      <input type="password" id="apiKey" placeholder="Enter your API key">
+    </div>
+<button id="save">Save Settings</button>
+    <div id="status" class="status" style="display: none;"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
