@@ -5,23 +5,23 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/spinkit/2.0.1/spinkit.min.css" rel="stylesheet">
   <style>
     body {
-      width: 420px; /* Slightly wider */
-      padding: 16px; /* Reduced padding */
+      width: 420px;
+      padding: 16px;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
-      background-color: #f9fafb; /* Light gray background for the body */
+      background-color: #f9fafb;
     }
 
     .container {
       display: flex;
       flex-direction: column;
-      gap: 16px; /* Consistent gap */
+      gap: 16px;
     }
 
     .header {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Align title and back button */
+      justify-content: space-between;
       gap: 12px;
       padding-bottom: 12px;
       border-bottom: 1px solid #e5e7eb;
@@ -30,7 +30,7 @@
     .main-header {
       display: flex;
       align-items: center;
-      gap: 8px; /* Gap between icon and title */
+      gap: 8px;
     }
 
     .main-header img {
@@ -43,7 +43,7 @@
       border: none;
       cursor: pointer;
       padding: 8px;
-      margin-left: -8px; /* Align with edge */
+      margin-left: -8px;
       color: #4b5563;
       display: flex;
       align-items: center;
@@ -64,7 +64,7 @@
     h2 {
       margin: 0;
       color: #111827;
-      font-size: 18px; /* Adjusted size */
+      font-size: 18px;
       font-weight: 600;
     }
     
@@ -92,18 +92,17 @@
         border: 1px solid #a7f3d0;
     }
 
-
     .button {
       background-color: #2563eb;
       color: white;
       border: none;
-      padding: 10px 16px; /* Adjusted padding */
-      border-radius: 6px; /* Softer radius */
+      padding: 10px 16px;
+      border-radius: 6px;
       cursor: pointer;
       font-weight: 500;
-      font-size: 15px; /* Standardized font size */
+      font-size: 15px;
       transition: background-color 0.2s;
-      width: 100%; /* Full width button */
+      width: 100%;
       box-sizing: border-box;
     }
 
@@ -120,10 +119,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; /* Center loading */
+      justify-content: center;
       gap: 16px;
-      padding: 48px 0; /* More vertical padding */
-      min-height: 200px; /* Ensure it takes some space */
+      padding: 48px 0;
+      min-height: 200px;
     }
 
     .loading-text {
@@ -135,8 +134,8 @@
       background-color: #ffffff;
       border-radius: 8px;
       padding: 16px;
-      border: 1px solid #e5e7eb; /* Subtle border */
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); /* Subtle shadow */
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
     }
     
     .section-title {
@@ -144,7 +143,7 @@
       justify-content: space-between;
       align-items: center;
       margin: 0 0 12px 0;
-      color: #374155; /* Darker gray for titles */
+      color: #374155;
       font-size: 16px;
       font-weight: 600;
     }
@@ -163,14 +162,13 @@
       background-color: #d1d5db;
     }
     .copy-button.copied {
-      background-color: #10b981; /* Green when copied */
+      background-color: #10b981;
       color: white;
     }
 
-
     .complexity-display {
         display: flex;
-        gap: 12px; /* Space between time and space */
+        gap: 12px;
         margin-bottom: 16px;
     }
 
@@ -192,39 +190,39 @@
         font-weight: 600;
     }
 
-    .explanation {
+    .content-text {
       color: #334155;
       line-height: 1.6;
-      font-size: 14px; /* Standardized font size */
+      font-size: 14px;
     }
 
     .graph-container {
-      background: white; /* Keep graph background white for clarity */
-      padding: 0; /* Remove padding if canvas handles it */
-      margin-top: 8px; /* Space above graph */
+      background: white;
+      padding: 0;
+      margin-top: 8px;
     }
 
-    .optimizations ul {
+    .list-container ul {
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
-    .optimization-item {
+    .list-item {
       display: flex;
       gap: 12px;
-      padding: 10px 0; /* Adjusted padding */
-      border-top: 1px solid #dbeafe; /* Lighter blue border */
-      font-size: 14px; /* Standardized font size */
+      padding: 10px 0;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
     }
 
-    .optimization-item:first-child {
+    .list-item:first-child {
       padding-top: 0;
       border-top: none;
     }
 
-    .optimization-number {
-      width: 22px; /* Slightly smaller */
+    .list-number {
+      width: 22px;
       height: 22px;
       background: #bfdbfe;
       border-radius: 6px;
@@ -234,23 +232,99 @@
       color: #1e40af;
       font-weight: 500;
       flex-shrink: 0;
-      font-size: 12px; /* Smaller font for number */
+      font-size: 12px;
     }
 
-    .optimization-text {
+    .list-text {
       margin: 0;
-      color: #1e3a8a; /* Darker blue for text */
+      color: #1e3a8a;
+      line-height: 1.5;
+    }
+
+    .pattern-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      margin-right: 8px;
+      margin-bottom: 4px;
+    }
+
+    .alternative-approach {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
+
+    .alternative-approach:last-child {
+      margin-bottom: 0;
+    }
+
+    .approach-header {
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+
+    .approach-complexity {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .approach-description {
+      font-size: 14px;
+      color: #475569;
       line-height: 1.5;
     }
 
     .hidden {
-      display: none !important; /* Ensure hidden class works */
+      display: none !important;
     }
 
     canvas {
       max-width: 100%;
       height: auto;
-      display: block; /* Remove extra space below canvas */
+      display: block;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 16px;
+    }
+
+    .tab {
+      padding: 8px 12px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: #6b7280;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .tab.active {
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+    }
+
+    .tab:hover {
+      color: #374151;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
     }
   </style>
 </head>
@@ -303,39 +377,137 @@
       </div>
       <div id="analysisProblemTitle" class="problem-title" style="margin-top: -8px; margin-bottom: 12px;"></div>
 
+      <!-- Complexity Display -->
       <div class="analysis-section complexity-display">
-          <div id="timeComplexityContainer" class="complexity-item">
-              {/* Time Complexity Badge will be injected here */}
-          </div>
-          <div id="spaceComplexityContainer" class="complexity-item">
-              {/* Space Complexity Badge will be injected here */}
-          </div>
+          <div id="timeComplexityContainer" class="complexity-item"></div>
+          <div id="spaceComplexityContainer" class="complexity-item"></div>
       </div>
-      
+
+      <!-- Pattern Recognition -->
       <div class="analysis-section">
         <div class="section-title">
-            <span>Explanation</span>
-            <button class="copy-button" data-clipboard-target="explanationContainer">Copy</button>
+            <span>Pattern Recognition</span>
+            <button class="copy-button" data-clipboard-target="patternContainer">Copy</button>
         </div>
-        <div id="explanationContainer" class="explanation"></div>
+        <div id="patternContainer"></div>
       </div>
       
+      <!-- Tabbed Content -->
       <div class="analysis-section">
-        <h3 class="section-title">Growth Visualization</h3>
-        <div id="complexityGraphContainer" class="graph-container">
-          <!-- Canvas will be appended here by JS -->
+        <div class="tabs">
+          <button class="tab active" data-tab="overview">Overview</button>
+          <button class="tab" data-tab="analysis">Analysis</button>
+          <button class="tab" data-tab="insights">Insights</button>
+          <button class="tab" data-tab="practice">Practice</button>
         </div>
-      </div>
-      
-      <div class="analysis-section">
-        <div class="section-title">
-            <span>Optimization Insights</span>
-            <button class="copy-button" data-clipboard-target="optimizationsList">Copy</button>
+
+        <!-- Overview Tab -->
+        <div id="overview-tab" class="tab-content active">
+          <div class="section-title">
+              <span>Approach Explanation</span>
+              <button class="copy-button" data-clipboard-target="approachContainer">Copy</button>
+          </div>
+          <div id="approachContainer" class="content-text"></div>
+          
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Code Walkthrough</span>
+                <button class="copy-button" data-clipboard-target="walkthroughContainer">Copy</button>
+            </div>
+            <div id="walkthroughContainer" class="content-text"></div>
+          </div>
         </div>
-        <div id="optimizationsContainer">
-            <ul id="optimizationsList">
-                {/* Optimization items will be injected here */}
-            </ul>
+
+        <!-- Analysis Tab -->
+        <div id="analysis-tab" class="tab-content">
+          <div class="section-title">
+              <span>Detailed Complexity Analysis</span>
+              <button class="copy-button" data-clipboard-target="complexityAnalysisContainer">Copy</button>
+          </div>
+          <div id="complexityAnalysisContainer" class="content-text"></div>
+          
+          <div style="margin-top: 20px;">
+            <h3 class="section-title">Growth Visualization</h3>
+            <div id="complexityGraphContainer" class="graph-container"></div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Alternative Approaches</span>
+                <button class="copy-button" data-clipboard-target="alternativeContainer">Copy</button>
+            </div>
+            <div id="alternativeContainer"></div>
+          </div>
+        </div>
+
+        <!-- Insights Tab -->
+        <div id="insights-tab" class="tab-content">
+          <div class="section-title">
+              <span>Key Insights</span>
+              <button class="copy-button" data-clipboard-target="insightsList">Copy</button>
+          </div>
+          <div class="list-container">
+              <ul id="insightsList"></ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Common Mistakes</span>
+                <button class="copy-button" data-clipboard-target="mistakesList">Copy</button>
+            </div>
+            <div class="list-container">
+                <ul id="mistakesList"></ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Optimizations</span>
+                <button class="copy-button" data-clipboard-target="optimizationsList">Copy</button>
+            </div>
+            <div class="list-container">
+                <ul id="optimizationsList"></ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Edge Cases</span>
+                <button class="copy-button" data-clipboard-target="edgeCasesList">Copy</button>
+            </div>
+            <div class="list-container">
+                <ul id="edgeCasesList"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Practice Tab -->
+        <div id="practice-tab" class="tab-content">
+          <div class="section-title">
+              <span>Interview Tips</span>
+              <button class="copy-button" data-clipboard-target="interviewTipsList">Copy</button>
+          </div>
+          <div class="list-container">
+              <ul id="interviewTipsList"></ul>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Practice Advice</span>
+                <button class="copy-button" data-clipboard-target="practiceAdviceContainer">Copy</button>
+            </div>
+            <div id="practiceAdviceContainer" class="content-text"></div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <div class="section-title">
+                <span>Related Problems</span>
+                <button class="copy-button" data-clipboard-target="relatedProblemsList">Copy</button>
+            </div>
+            <div class="list-container">
+                <ul id="relatedProblemsList"></ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
